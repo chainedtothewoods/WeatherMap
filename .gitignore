@@ -6,7 +6,3 @@
 *.xcuserstate
 project.xcworkspace/
 xcuserdata/
-
-# Cocoapods
-Pods/
-

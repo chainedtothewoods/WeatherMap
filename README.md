@@ -13,3 +13,6 @@ NSString* const kGoogleMapsServiceID = @"";
 NSString* const kAerisWeatherServiceID = @"";
 NSString* const kAerisWeatherClientSecret = @"";
 ```
+#License
+
+Copyright Michael Lapuebla. All Rights Reserved.

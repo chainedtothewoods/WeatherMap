@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--WeatherMap-->
+        <!--Pronto Weather-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WMMainMapVC" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gdc-XX-qD1" secondAttribute="bottom" id="sSe-7h-Icb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="WeatherMap" id="6Jw-yX-YEH"/>
+                    <navigationItem key="navigationItem" title="Pronto Weather" id="6Jw-yX-YEH"/>
                     <connections>
                         <outlet property="mapView" destination="gdc-XX-qD1" id="Tj6-U1-8vH"/>
                     </connections>

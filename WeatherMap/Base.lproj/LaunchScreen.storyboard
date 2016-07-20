@@ -16,7 +16,30 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="AAn-6l-cTB">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug0-RB-eb2">
+                                <rect key="frame" x="199" y="165" width="202.5" height="35"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Pronto Weather">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.92941176470588238" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue-LightItalic"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.25098039220000001" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="AAn-6l-cTB" firstAttribute="top" secondItem="ug0-RB-eb2" secondAttribute="bottom" id="bPc-kO-dhD"/>
+                            <constraint firstItem="ug0-RB-eb2" firstAttribute="centerX" secondItem="AAn-6l-cTB" secondAttribute="centerX" id="jlb-6m-qSY"/>
+                            <constraint firstItem="AAn-6l-cTB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="t4X-ZV-Yln"/>
+                            <constraint firstItem="AAn-6l-cTB" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xMr-Bq-Gjf"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +47,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash_image.png" width="200" height="200"/>
+    </resources>
 </document>

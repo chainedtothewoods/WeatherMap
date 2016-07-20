@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		639CCE7842C4C97825CC4F49 /* libPods-WeatherMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C47B8856A7D8EAF0B72579A8 /* libPods-WeatherMap.a */; };
+		C02C7C021D3F8E4D00204BE2 /* splash_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C02C7C011D3F8E4D00204BE2 /* splash_image.png */; };
 		C0806CAA1D3D7B380017D395 /* WMMainMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0806CA81D3D7B380017D395 /* WMMainMap.storyboard */; };
 		C0F1D0B71D3D78F300EFE224 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1D0B61D3D78F300EFE224 /* main.m */; };
 		C0F1D0C31D3D78F300EFE224 /* WeatherMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0F1D0C11D3D78F300EFE224 /* WeatherMap.xcdatamodeld */; };
@@ -35,6 +36,7 @@
 		146F1BF716789AF7FD738644 /* Pods-WeatherMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherMapTests/Pods-WeatherMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		43A063447BB191D4B971EB20 /* libPods-WeatherMapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherMapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FE6195865C335BF2D2E6B9 /* Pods-WeatherMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherMapTests/Pods-WeatherMapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C02C7C011D3F8E4D00204BE2 /* splash_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_image.png; sourceTree = "<group>"; };
 		C0806CA91D3D7B380017D395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WMMainMap.storyboard; sourceTree = "<group>"; };
 		C0AD70C7CAC8D214F2FD08BA /* Pods-WeatherMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherMap/Pods-WeatherMap.release.xcconfig"; sourceTree = "<group>"; };
 		C0F1D0B21D3D78F300EFE224 /* WeatherMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C02C7BFC1D3F7D3F00204BE2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C02C7C011D3F8E4D00204BE2 /* splash_image.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		C0F1D0A91D3D78F300EFE224 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 		C0F1D0B51D3D78F300EFE224 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C02C7BFC1D3F7D3F00204BE2 /* Images */,
 				C0F1D0B61D3D78F300EFE224 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -290,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02C7C021D3F8E4D00204BE2 /* splash_image.png in Resources */,
 				C0F1D0C81D3D78F300EFE224 /* LaunchScreen.storyboard in Resources */,
 				C0806CAA1D3D7B380017D395 /* WMMainMap.storyboard in Resources */,
 				C0F1D0C51D3D78F300EFE224 /* Assets.xcassets in Resources */,
@@ -542,8 +554,10 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				INFOPLIST_FILE = WeatherMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.limestro.WeatherMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chainedtothewoods.WeatherMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a95ef228-5d23-4b9a-a624-4a438cad3f99";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -553,10 +567,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Michael Lapuebla (FUH7VL55TZ)";
 				INFOPLIST_FILE = WeatherMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.limestro.WeatherMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chainedtothewoods.WeatherMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a95ef228-5d23-4b9a-a624-4a438cad3f99";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

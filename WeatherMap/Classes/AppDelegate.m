@@ -23,6 +23,7 @@
     // Override point for customization after application launch.
     
     [self setupGoogleMapsService];
+    [self setupAerisWeatherService];
     
     return YES;
 }

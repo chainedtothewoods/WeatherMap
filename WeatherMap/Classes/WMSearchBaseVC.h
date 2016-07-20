@@ -12,7 +12,8 @@
 
 @protocol WMSearchBaseVCDelegate <NSObject>
 @required
-- (void)zoomMapToCoordinate:(CLLocationCoordinate2D)coordinate;
+- (void)zoomMapToCoordinate:(CLLocationCoordinate2D)coordinate withName:(NSString *)placeName;
+- (void)newSearchStarted;
 
 @end
 

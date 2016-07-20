@@ -44,6 +44,12 @@
 #pragma mark - UISearchBarDelegate
 // *******************************************************
 
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    if([_searchMapDelegate respondsToSelector:@selector(newSearchStarted)]) {
+        [_searchMapDelegate newSearchStarted];
+    }
+}
+
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     // TODO: Coalesce Search
     
@@ -126,8 +132,8 @@
             CLLocationCoordinate2D coordinate = [place coordinate];
             NSLog(@"Longitude: %f -- Latitude: %f", coordinate.longitude, coordinate.latitude);
             
-            if([_searchMapDelegate respondsToSelector:@selector(zoomMapToCoordinate:)]) {
-                [_searchMapDelegate zoomMapToCoordinate:coordinate];
+            if([_searchMapDelegate respondsToSelector:@selector(zoomMapToCoordinate:withName:)]) {
+                [_searchMapDelegate zoomMapToCoordinate:coordinate withName:place.name];
                 [self searchCompleted];
             }
             

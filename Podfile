@@ -7,6 +7,7 @@ target 'WeatherMap' do
 
   # Pods for WeatherMap
   pod 'AerisWeather'
+  pod 'AerisWeather/AerisUI'
   pod 'GoogleMaps'
   pod 'Mapbox-iOS-SDK'
 

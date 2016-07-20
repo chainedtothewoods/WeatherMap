@@ -1,0 +1,1 @@
+../../../../AerisWeather/AerisWeatherSDK/AerisUI.framework/Versions/A/Headers/AWFCollectionViewForecast24HourCell.h

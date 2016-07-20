@@ -81,10 +81,12 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "AerisWeather/AerisWeatherSDK/Aeris.bundle"
+  install_resource "AerisWeather/AerisWeatherSDK/AerisUI.bundle"
   install_resource "GoogleMaps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "AerisWeather/AerisWeatherSDK/Aeris.bundle"
+  install_resource "AerisWeather/AerisWeatherSDK/AerisUI.bundle"
   install_resource "GoogleMaps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"
 fi
 

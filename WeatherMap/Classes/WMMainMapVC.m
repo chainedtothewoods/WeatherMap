@@ -13,6 +13,7 @@
 @import AerisUI;
 
 #define kObservationViewHeight  200.0
+#define kAnimationDuration      0.5
 
 @interface WMMainMapVC () <WMSearchBaseVCDelegate>
 
@@ -41,8 +42,7 @@
     _obsLoader = [[AWFObservationsLoader alloc] init];
     
     CGRect viewFrame = self.view.frame;
-    _obsView = [[AWFObservationView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(viewFrame) - kObservationViewHeight, CGRectGetWidth(viewFrame), kObservationViewHeight)];
-    [_obsView setHidden:true];
+    _obsView = [[AWFObservationView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(viewFrame), CGRectGetWidth(viewFrame), kObservationViewHeight)];
     [self.view addSubview:_obsView];
 }
 
@@ -72,7 +72,7 @@
 }
 
 - (void)newSearchStarted {
-    [_obsView setHidden:true];
+    [self slideObservationViewDown];
 }
 
 - (void)weatherInfoForCoodinate:(CLLocationCoordinate2D)coordinate withName:(NSString *)placeName {
@@ -85,7 +85,7 @@
         }
         
         if ([objects count] > 0) {
-            [weakObsView setHidden:false];
+            
             AWFObservation *obs = (AWFObservation *)[objects objectAtIndex:0];
             
             // determine winds string
@@ -106,7 +106,26 @@
             weakObsView.humidityTextLabel.text = [NSString stringWithFormat:@"%i%%", [obs.humidity intValue]];
             weakObsView.pressureTextLabel.text = [NSString stringWithFormat:@"%.2f in", [obs.pressureIN floatValue]];
             
+            [self slideObservationViewUp];
         }
+    }];
+}
+
+// *******************************************************
+#pragma mark - Animations
+// *******************************************************
+
+- (void)slideObservationViewUp {
+    [UIView animateWithDuration:kAnimationDuration animations:^{
+        CGRect viewFrame = self.view.frame;
+        _obsView.frame = CGRectMake(0, CGRectGetHeight(viewFrame) - kObservationViewHeight, CGRectGetWidth(viewFrame), kObservationViewHeight);
+    }];
+}
+
+- (void)slideObservationViewDown {
+    [UIView animateWithDuration:kAnimationDuration animations:^{
+        CGRect viewFrame = self.view.frame;
+        _obsView.frame = CGRectMake(0, CGRectGetHeight(viewFrame), CGRectGetWidth(viewFrame), kObservationViewHeight);
     }];
 }
 

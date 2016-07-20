@@ -28,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [_mapView setOpaque:NO];
     [self setupWeatherObservationView];
 }
 

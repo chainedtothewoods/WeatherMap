@@ -3,7 +3,7 @@
 //  WeatherMap
 //
 //  Created by Michael Lapuebla on 7/14/16.
-//  Copyright © 2016 Mike Lapuebla. All rights reserved.
+//  Copyright © 2016 Michael Lapuebla. All rights reserved.
 //
 
 #import "WMSearchBaseVC.h"

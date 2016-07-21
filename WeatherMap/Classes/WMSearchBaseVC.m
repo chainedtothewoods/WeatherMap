@@ -62,7 +62,7 @@
     } else {
         NSMutableArray *predictionResults = [[NSMutableArray alloc] init];
         GMSAutocompleteFilter *filter = [[GMSAutocompleteFilter alloc] init];
-        filter.type = kGMSPlacesAutocompleteTypeFilterCity;
+        filter.type = kGMSPlacesAutocompleteTypeFilterRegion;
         
         [_gmPlacesClient autocompleteQuery:searchText bounds:nil filter:filter callback:^(NSArray *results, NSError *error) {
             if (error != nil) {

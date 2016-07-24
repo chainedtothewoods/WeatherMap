@@ -64,7 +64,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rsf-s2-0IV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cBa-YC-5SN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cBa-YC-5SN" customClass="WMNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

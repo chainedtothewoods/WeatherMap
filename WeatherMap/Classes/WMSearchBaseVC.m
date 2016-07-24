@@ -7,6 +7,7 @@
 //
 
 #import "WMSearchBaseVC.h"
+#import "UIColor+Style.h"
 @import GoogleMaps;
 
 @interface WMSearchBaseVC () <UISearchBarDelegate, UITableViewDataSource>
@@ -34,6 +35,11 @@
 
 - (void)setupSearchResultsController {
     _searchBar.delegate = self;
+    
+    // Style SearchBar
+    [_searchBar setBarTintColor:[UIColor weatherMapYellow]];
+    [_searchBar.layer setBorderWidth:1.0];
+    [_searchBar.layer setBorderColor:[[UIColor weatherMapYellow] CGColor]];
     [_tableView setHidden:true];
     
     _gmPlacesClient = [GMSPlacesClient sharedClient];

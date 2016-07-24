@@ -8,8 +8,10 @@
 
 #import "AppDelegate.h"
 #import "Globals.h"
+#import "UIColor+Style.h"
 @import GoogleMaps;
 @import Aeris;
+@import AerisUI;
 
 
 @interface AppDelegate ()
@@ -61,7 +63,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.limestro.WeatherMap" in the application's documents directory.
+    // The directory the application uses to store the Core Data store file.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
@@ -142,6 +144,14 @@
 
 - (void)setupAerisWeatherService {
     [AerisEngine engineWithKey:kAerisWeatherServiceID secret:kAerisWeatherClientSecret];
+    [self setupAWFCascadingStyle];
+}
+
+- (void)setupAWFCascadingStyle {
+    AWFCascadingStyle *newStyle = [[AWFCascadingStyle alloc] init];
+    [newStyle setBackgroundColor:[UIColor weatherMapYellow]];
+    [newStyle setKeylineColor:[UIColor weatherMapDarkYellow]];
+    [AWFCascadingStyle setDefaultStyle:newStyle];
 }
 
 // *******************************************************

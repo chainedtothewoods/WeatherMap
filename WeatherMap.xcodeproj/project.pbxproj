@@ -10,6 +10,8 @@
 		639CCE7842C4C97825CC4F49 /* libPods-WeatherMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C47B8856A7D8EAF0B72579A8 /* libPods-WeatherMap.a */; };
 		C02C7C021D3F8E4D00204BE2 /* splash_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C02C7C011D3F8E4D00204BE2 /* splash_image.png */; };
 		C0806CAA1D3D7B380017D395 /* WMMainMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0806CA81D3D7B380017D395 /* WMMainMap.storyboard */; };
+		C0AD43AE1D44979100958B20 /* WMNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD43AD1D44979100958B20 /* WMNavigationBar.m */; };
+		C0AD43B51D44A68C00958B20 /* UIColor+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD43B41D44A68C00958B20 /* UIColor+Style.m */; };
 		C0F1D0B71D3D78F300EFE224 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1D0B61D3D78F300EFE224 /* main.m */; };
 		C0F1D0C31D3D78F300EFE224 /* WeatherMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0F1D0C11D3D78F300EFE224 /* WeatherMap.xcdatamodeld */; };
 		C0F1D0C51D3D78F300EFE224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F1D0C41D3D78F300EFE224 /* Assets.xcassets */; };
@@ -38,6 +40,10 @@
 		43FE6195865C335BF2D2E6B9 /* Pods-WeatherMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherMapTests/Pods-WeatherMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C02C7C011D3F8E4D00204BE2 /* splash_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_image.png; sourceTree = "<group>"; };
 		C0806CA91D3D7B380017D395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WMMainMap.storyboard; sourceTree = "<group>"; };
+		C0AD43AC1D44979100958B20 /* WMNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMNavigationBar.h; path = Classes/WMNavigationBar.h; sourceTree = "<group>"; };
+		C0AD43AD1D44979100958B20 /* WMNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WMNavigationBar.m; path = Classes/WMNavigationBar.m; sourceTree = "<group>"; };
+		C0AD43B31D44A68C00958B20 /* UIColor+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Style.h"; path = "Classes/UIColor+Style.h"; sourceTree = "<group>"; };
+		C0AD43B41D44A68C00958B20 /* UIColor+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Style.m"; path = "Classes/UIColor+Style.m"; sourceTree = "<group>"; };
 		C0AD70C7CAC8D214F2FD08BA /* Pods-WeatherMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherMap/Pods-WeatherMap.release.xcconfig"; sourceTree = "<group>"; };
 		C0F1D0B21D3D78F300EFE224 /* WeatherMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F1D0B61D3D78F300EFE224 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -108,6 +114,24 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		C0AD43AB1D44977300958B20 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0AD43AC1D44979100958B20 /* WMNavigationBar.h */,
+				C0AD43AD1D44979100958B20 /* WMNavigationBar.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C0AD43AF1D44A65000958B20 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C0AD43B31D44A68C00958B20 /* UIColor+Style.h */,
+				C0AD43B41D44A68C00958B20 /* UIColor+Style.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		C0F1D0A91D3D78F300EFE224 = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +184,9 @@
 		C0F1D0DD1D3D793A00EFE224 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C0AD43AF1D44A65000958B20 /* Utility */,
 				C0F1D0DE1D3D793F00EFE224 /* Application */,
+				C0AD43AB1D44977300958B20 /* Views */,
 				C0F1D0DF1D3D794800EFE224 /* Viewcontrollers */,
 			);
 			name = Classes;
@@ -418,9 +444,11 @@
 				C0F1D0E51D3D799400EFE224 /* Globals.m in Sources */,
 				C0F1D0C31D3D78F300EFE224 /* WeatherMap.xcdatamodeld in Sources */,
 				C0F1D0EB1D3D79B100EFE224 /* WMMainMapVC.m in Sources */,
+				C0AD43B51D44A68C00958B20 /* UIColor+Style.m in Sources */,
 				C0F1D0B71D3D78F300EFE224 /* main.m in Sources */,
 				C0F1D0EA1D3D79B100EFE224 /* WMSearchBaseVC.m in Sources */,
 				C0F1D0E21D3D797300EFE224 /* AppDelegate.m in Sources */,
+				C0AD43AE1D44979100958B20 /* WMNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

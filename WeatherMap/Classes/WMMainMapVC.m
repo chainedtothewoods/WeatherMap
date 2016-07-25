@@ -8,12 +8,14 @@
 
 #import "WMMainMapVC.h"
 #import "WMSearchBaseVC.h"
+#import "WMSystemMessageView.h"
 @import Mapbox;
 @import Aeris;
 @import AerisUI;
 
 #define kObservationViewHeight  200.0
 #define kAnimationDuration      0.5
+#define kAnimationFadeoutDelay  3.0
 
 @interface WMMainMapVC () <WMSearchBaseVCDelegate>
 
@@ -21,6 +23,7 @@
 @property (nonatomic, strong) WMSearchBaseVC *searchPlacesVC;
 @property (nonatomic, strong) AWFObservationsLoader *obsLoader;
 @property (nonatomic, strong) AWFObservationView *obsView;
+@property (nonatomic, strong) WMSystemMessageView *systemMsgView;
 
 @end
 
@@ -31,6 +34,7 @@
     
     [_mapView setOpaque:NO];
     [self setupWeatherObservationView];
+    [self setupSystemMessageView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,12 +42,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+// *******************************************************
+#pragma mark - UI Setup
+// *******************************************************
+
 - (void)setupWeatherObservationView {
     _obsLoader = [[AWFObservationsLoader alloc] init];
     
     CGRect viewFrame = self.view.frame;
     _obsView = [[AWFObservationView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(viewFrame), CGRectGetWidth(viewFrame), kObservationViewHeight)];
     [self.view addSubview:_obsView];
+}
+
+- (void)setupSystemMessageView {
+    CGRect screenBounds = [UIScreen mainScreen].bounds;
+    _systemMsgView = [[WMSystemMessageView alloc] init];
+    _systemMsgView.center = CGPointMake(CGRectGetMidX(screenBounds), CGRectGetMidY(screenBounds));
+    [self.view addSubview:_systemMsgView];
+    [_systemMsgView setAlpha:0.0];
 }
 
 // *******************************************************
@@ -77,7 +93,8 @@
 
 - (void)weatherInfoForCoodinate:(CLLocationCoordinate2D)coordinate withName:(NSString *)placeName {
     AWFPlace *tempPlace = [AWFPlace placeWithCoordinate:coordinate];
-    __weak typeof(self.obsView) weakObsView = _obsView;
+    __weak typeof(_obsView) weakObsView = _obsView;
+    __weak typeof(_systemMsgView) weakSystemMsgView = _systemMsgView;
     [_obsLoader getObservationForPlace:tempPlace options:nil completion:^(NSArray *objects, NSError *error) {
         if (error) {
             NSLog(@"Observation data failed to load! %@", error);
@@ -108,7 +125,11 @@
             
             [self slideObservationViewUp];
         } else {
-            // TODO: Unable to retrieve any information for this location.
+            // Display No Weather Information Message
+            [weakSystemMsgView setAlpha:1.0];
+            [UIView animateWithDuration:kAnimationDuration delay:kAnimationFadeoutDelay options:UIViewAnimationOptionCurveEaseOut animations:^ {
+                [weakSystemMsgView setAlpha:0.0];
+            } completion:nil];
         }
     }];
 }

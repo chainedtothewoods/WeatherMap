@@ -9,6 +9,5 @@
 #ifdef __OBJC__
 
 #import "UIColor+Style.h"
-#import "UIFont+Style.h"
 
 #endif

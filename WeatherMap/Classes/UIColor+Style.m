@@ -22,4 +22,8 @@
     return [UIColor colorWithRed:1.00 green:0.79 blue:0.00 alpha:1.0];
 }
 
++ (UIColor *)weatherMapMessageBGBlue {
+    return [UIColor colorWithRed:0.18 green:0.41 blue:0.55 alpha:1.0];  /* 2d688c */
+}
+
 @end

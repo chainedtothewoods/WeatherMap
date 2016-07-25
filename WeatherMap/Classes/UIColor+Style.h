@@ -13,6 +13,7 @@
 + (UIColor *)weatherMapBlue;
 + (UIColor *)weatherMapYellow;
 + (UIColor *)weatherMapDarkYellow;
++ (UIColor *)weatherMapMessageBGBlue;
 
 @end
 

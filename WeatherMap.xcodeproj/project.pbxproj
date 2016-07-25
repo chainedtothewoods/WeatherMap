@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		639CCE7842C4C97825CC4F49 /* libPods-WeatherMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C47B8856A7D8EAF0B72579A8 /* libPods-WeatherMap.a */; };
-		C026E8EB1D468D9A00C8A8D1 /* UIFont+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = C026E8EA1D468D9A00C8A8D1 /* UIFont+Style.m */; };
+		C026E8F21D46B31900C8A8D1 /* WMSystemMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C026E8F11D46B31900C8A8D1 /* WMSystemMessageView.m */; };
+		C026E8F81D46B3DB00C8A8D1 /* WMSystemMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C026E8F71D46B3DB00C8A8D1 /* WMSystemMessageView.xib */; };
 		C02C7C021D3F8E4D00204BE2 /* splash_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C02C7C011D3F8E4D00204BE2 /* splash_image.png */; };
 		C0806CAA1D3D7B380017D395 /* WMMainMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0806CA81D3D7B380017D395 /* WMMainMap.storyboard */; };
 		C0AD43AE1D44979100958B20 /* WMNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD43AD1D44979100958B20 /* WMNavigationBar.m */; };
@@ -39,9 +40,10 @@
 		146F1BF716789AF7FD738644 /* Pods-WeatherMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherMapTests/Pods-WeatherMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		43A063447BB191D4B971EB20 /* libPods-WeatherMapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherMapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FE6195865C335BF2D2E6B9 /* Pods-WeatherMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherMapTests/Pods-WeatherMapTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C026E8E91D468D9A00C8A8D1 /* UIFont+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Style.h"; sourceTree = "<group>"; };
-		C026E8EA1D468D9A00C8A8D1 /* UIFont+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Style.m"; sourceTree = "<group>"; };
 		C026E8EF1D469CC300C8A8D1 /* WeatherMap-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeatherMap-prefix.pch"; sourceTree = "<group>"; };
+		C026E8F01D46B31900C8A8D1 /* WMSystemMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMSystemMessageView.h; path = Classes/WMSystemMessageView.h; sourceTree = "<group>"; };
+		C026E8F11D46B31900C8A8D1 /* WMSystemMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WMSystemMessageView.m; path = Classes/WMSystemMessageView.m; sourceTree = "<group>"; };
+		C026E8F71D46B3DB00C8A8D1 /* WMSystemMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WMSystemMessageView.xib; path = NIBs/WMSystemMessageView.xib; sourceTree = "<group>"; };
 		C02C7C011D3F8E4D00204BE2 /* splash_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_image.png; sourceTree = "<group>"; };
 		C0806CA91D3D7B380017D395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WMMainMap.storyboard; sourceTree = "<group>"; };
 		C0AD43AC1D44979100958B20 /* WMNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMNavigationBar.h; path = Classes/WMNavigationBar.h; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C026E8F61D46B36800C8A8D1 /* NIBs */ = {
+			isa = PBXGroup;
+			children = (
+				C026E8F71D46B3DB00C8A8D1 /* WMSystemMessageView.xib */,
+			);
+			name = NIBs;
+			sourceTree = "<group>";
+		};
 		C02C7BFC1D3F7D3F00204BE2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,8 @@
 			children = (
 				C0AD43AC1D44979100958B20 /* WMNavigationBar.h */,
 				C0AD43AD1D44979100958B20 /* WMNavigationBar.m */,
+				C026E8F01D46B31900C8A8D1 /* WMSystemMessageView.h */,
+				C026E8F11D46B31900C8A8D1 /* WMSystemMessageView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -132,8 +144,6 @@
 			children = (
 				C0AD43B31D44A68C00958B20 /* UIColor+Style.h */,
 				C0AD43B41D44A68C00958B20 /* UIColor+Style.m */,
-				C026E8E91D468D9A00C8A8D1 /* UIFont+Style.h */,
-				C026E8EA1D468D9A00C8A8D1 /* UIFont+Style.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -234,6 +244,7 @@
 		C0F1D0ED1D3D79F300EFE224 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C026E8F61D46B36800C8A8D1 /* NIBs */,
 				C0F1D0EE1D3D79FE00EFE224 /* Storyboards */,
 			);
 			name = Resources;
@@ -334,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C026E8F81D46B3DB00C8A8D1 /* WMSystemMessageView.xib in Resources */,
 				C02C7C021D3F8E4D00204BE2 /* splash_image.png in Resources */,
 				C0F1D0C81D3D78F300EFE224 /* LaunchScreen.storyboard in Resources */,
 				C0806CAA1D3D7B380017D395 /* WMMainMap.storyboard in Resources */,
@@ -450,9 +462,9 @@
 			files = (
 				C0F1D0E51D3D799400EFE224 /* Globals.m in Sources */,
 				C0F1D0C31D3D78F300EFE224 /* WeatherMap.xcdatamodeld in Sources */,
-				C026E8EB1D468D9A00C8A8D1 /* UIFont+Style.m in Sources */,
 				C0F1D0EB1D3D79B100EFE224 /* WMMainMapVC.m in Sources */,
 				C0AD43B51D44A68C00958B20 /* UIColor+Style.m in Sources */,
+				C026E8F21D46B31900C8A8D1 /* WMSystemMessageView.m in Sources */,
 				C0F1D0B71D3D78F300EFE224 /* main.m in Sources */,
 				C0F1D0EA1D3D79B100EFE224 /* WMSearchBaseVC.m in Sources */,
 				C0F1D0E21D3D797300EFE224 /* AppDelegate.m in Sources */,

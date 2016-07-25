@@ -107,6 +107,8 @@
             weakObsView.pressureTextLabel.text = [NSString stringWithFormat:@"%.2f in", [obs.pressureIN floatValue]];
             
             [self slideObservationViewUp];
+        } else {
+            // TODO: Unable to retrieve any information for this location.
         }
     }];
 }

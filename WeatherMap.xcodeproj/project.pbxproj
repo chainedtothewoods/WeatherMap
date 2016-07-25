@@ -184,8 +184,8 @@
 		C0F1D0DD1D3D793A00EFE224 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C0AD43AF1D44A65000958B20 /* Utility */,
 				C0F1D0DE1D3D793F00EFE224 /* Application */,
+				C0AD43AF1D44A65000958B20 /* Utility */,
 				C0AD43AB1D44977300958B20 /* Views */,
 				C0F1D0DF1D3D794800EFE224 /* Viewcontrollers */,
 			);

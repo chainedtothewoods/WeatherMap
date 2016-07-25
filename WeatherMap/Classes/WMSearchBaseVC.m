@@ -38,6 +38,8 @@
     
     // Style SearchBar
     [_searchBar setBarTintColor:[UIColor weatherMapYellow]];
+    
+    // Hide Top and Bottom Black Borders
     [_searchBar.layer setBorderWidth:1.0];
     [_searchBar.layer setBorderColor:[[UIColor weatherMapYellow] CGColor]];
     [_tableView setHidden:true];
@@ -68,7 +70,7 @@
     } else {
         NSMutableArray *predictionResults = [[NSMutableArray alloc] init];
         GMSAutocompleteFilter *filter = [[GMSAutocompleteFilter alloc] init];
-        filter.type = kGMSPlacesAutocompleteTypeFilterRegion;
+        filter.type = kGMSPlacesAutocompleteTypeFilterCity;
         
         [_gmPlacesClient autocompleteQuery:searchText bounds:nil filter:filter callback:^(NSArray *results, NSError *error) {
             if (error != nil) {

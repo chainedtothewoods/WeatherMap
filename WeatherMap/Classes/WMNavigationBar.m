@@ -27,7 +27,7 @@ CAGradientLayer *gradientLayer;
     CGSize statusBarSize = [UIApplication sharedApplication].statusBarFrame.size;
     gradientLayer = [[CAGradientLayer alloc] init];
     gradientLayer.frame = CGRectMake(0.0, 0.0 - statusBarSize.height, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) + statusBarSize.height);
-    [gradientLayer setColors:@[(id)[UIColor weatherMapBlue].CGColor, (id)[UIColor weatherMapYellow].CGColor]];
+    [gradientLayer setColors:@[(id)[UIColor weatherMapBlue].CGColor, (id)[UIColor weatherMapDarkYellow].CGColor, (id)[UIColor weatherMapYellow].CGColor]];
     [self.layer insertSublayer:gradientLayer atIndex:1];
 }
 

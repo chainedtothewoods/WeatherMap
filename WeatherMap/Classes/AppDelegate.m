@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "Globals.h"
-#import "UIColor+Style.h"
 @import GoogleMaps;
 @import Aeris;
 @import AerisUI;

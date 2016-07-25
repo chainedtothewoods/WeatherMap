@@ -7,7 +7,7 @@
 //
 
 #import "WMSearchBaseVC.h"
-#import "UIColor+Style.h"
+
 @import GoogleMaps;
 
 @interface WMSearchBaseVC () <UISearchBarDelegate, UITableViewDataSource>
@@ -31,7 +31,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 - (void)setupSearchResultsController {
     _searchBar.delegate = self;

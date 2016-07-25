@@ -7,7 +7,6 @@
 //
 
 #import "WMNavigationBar.h"
-#import "UIColor+Style.h"
 
 #define kWMNavigationBarShadowColor         [UIColor blackColor].CGColor
 #define kWMNavigationBarShadowOffset        CGSizeMake(0, 4)

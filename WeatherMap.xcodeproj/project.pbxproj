@@ -12,6 +12,7 @@
 		C026E8F81D46B3DB00C8A8D1 /* WMSystemMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C026E8F71D46B3DB00C8A8D1 /* WMSystemMessageView.xib */; };
 		C02C7C021D3F8E4D00204BE2 /* splash_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C02C7C011D3F8E4D00204BE2 /* splash_image.png */; };
 		C0806CAA1D3D7B380017D395 /* WMMainMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0806CA81D3D7B380017D395 /* WMMainMap.storyboard */; };
+		C08F84DA1D58271A0040876B /* WMCoreDataStackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C08F84D91D58271A0040876B /* WMCoreDataStackManager.m */; };
 		C0AD43AE1D44979100958B20 /* WMNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD43AD1D44979100958B20 /* WMNavigationBar.m */; };
 		C0AD43B51D44A68C00958B20 /* UIColor+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AD43B41D44A68C00958B20 /* UIColor+Style.m */; };
 		C0F1D0B71D3D78F300EFE224 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F1D0B61D3D78F300EFE224 /* main.m */; };
@@ -46,6 +47,8 @@
 		C026E8F71D46B3DB00C8A8D1 /* WMSystemMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WMSystemMessageView.xib; path = NIBs/WMSystemMessageView.xib; sourceTree = "<group>"; };
 		C02C7C011D3F8E4D00204BE2 /* splash_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_image.png; sourceTree = "<group>"; };
 		C0806CA91D3D7B380017D395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WMMainMap.storyboard; sourceTree = "<group>"; };
+		C08F84D81D58271A0040876B /* WMCoreDataStackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMCoreDataStackManager.h; path = Classes/WMCoreDataStackManager.h; sourceTree = "<group>"; };
+		C08F84D91D58271A0040876B /* WMCoreDataStackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WMCoreDataStackManager.m; path = Classes/WMCoreDataStackManager.m; sourceTree = "<group>"; };
 		C0AD43AC1D44979100958B20 /* WMNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMNavigationBar.h; path = Classes/WMNavigationBar.h; sourceTree = "<group>"; };
 		C0AD43AD1D44979100958B20 /* WMNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WMNavigationBar.m; path = Classes/WMNavigationBar.m; sourceTree = "<group>"; };
 		C0AD43B31D44A68C00958B20 /* UIColor+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Style.h"; path = "Classes/UIColor+Style.h"; sourceTree = "<group>"; };
@@ -128,6 +131,15 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		C08F84DB1D5827E20040876B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C08F84D81D58271A0040876B /* WMCoreDataStackManager.h */,
+				C08F84D91D58271A0040876B /* WMCoreDataStackManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C0AD43AB1D44977300958B20 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				C0F1D0DE1D3D793F00EFE224 /* Application */,
+				C08F84DB1D5827E20040876B /* Model */,
 				C0AD43AF1D44A65000958B20 /* Utility */,
 				C0AD43AB1D44977300958B20 /* Views */,
 				C0F1D0DF1D3D794800EFE224 /* Viewcontrollers */,
@@ -469,6 +482,7 @@
 				C0F1D0EA1D3D79B100EFE224 /* WMSearchBaseVC.m in Sources */,
 				C0F1D0E21D3D797300EFE224 /* AppDelegate.m in Sources */,
 				C0AD43AE1D44979100958B20 /* WMNavigationBar.m in Sources */,
+				C08F84DA1D58271A0040876B /* WMCoreDataStackManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

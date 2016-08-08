@@ -8,6 +8,7 @@
 
 #ifdef __OBJC__
 
+#import "WMCoreDataStackManager.h"      // Core Data
 #import "UIColor+Style.h"
 
 #endif
